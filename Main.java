@@ -1,106 +1,53 @@
+/**
+*Домашнее задание к уроку 2
+* @Golovanov Igor
+*/
 package Fine;
-
-import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
-import java.util.Arrays;
-import java.util.Date;
-
 public class Main {
-
     public static void main(String[] args) {
-
-        // назначение переменных
-
-        byte a1 = 1;
-        short a2 = 10000;
-        int a3 = 100000;
-        long a4 = 5L;
-        float a5 = 4.0f;
-        double a6 = 3.14;
-        boolean a7 = true;
-        char a8 = 'd';
-
-    System.out.println(met1(1,2,6,3));
-    System.out.println(met2(13,4));
-    System.out.println(met3(-2));
-    System.out.println(met4(-4));
-    met5("Vasya");
-met6();
-
-
-
-
-
-
-
+        int [] mass = {2,1, 9, 7, 0, -4,6, 3};
+Ex5(mass);
+Ex6(mass);
     }
-       //метод 1
-
-      public static int met1(int a,int b,int c,int d)
-        {  int x;
-                x=c/d;
-                x=b+x;
-                x=a*x;
-        return x;}
-
-        //метод2
-
-    public static boolean met2(int a,int b)
-    {int x= a+b;
-    boolean z;
-    if (10<=x&20>=x)
-    {z=true;}
-    else
-    {z=false;}
-        return z; }
-
-        //метод 3
-
-    public static char met3(int a)
-    {  char x;
-        if (a>0)
-        {x='+';}
-        else
-        {x='-';}
-        return x;}
-
-    //метод 4
-
-    public static boolean met4(int a)
-    {  boolean x;
-        if (a>0)
-        {x=false;}
-        else
-        {x=true;}
-        return x;}
-
-    //метод 5
-
-    public static String met5(String a)
-    { String x = a;
-        System.out.println("Привет,"+x);
-        return x;
+    // Задание 5
+public static void Ex5(int [] mass)
+{
+    int count;
+    int current;
+    int max = 0;
+    int min = 0;
+for (count = 0; count < mass.length; count = count+1)
+{
+current = mass[count];
+    if (current > max) {
+        max = current;
+    }
+}
+    for (count = 0; count < mass.length; count = count+1)
+    {
+        current = mass[count];
+        if (current < min) {
+            min = current;
         }
-
-        //метод 6
-//немного не успел дописать про 100 и 400 лет, но логика сохраняется:
-// формируется массив исключений и два дополнительных логических оператора
-    public static void met6(){
-    Date d = new Date();
-    SimpleDateFormat format1 = new SimpleDateFormat("yyyy");
-    int year = Integer.parseInt(format1.format(d));
-    System.out.println(year);
-    int qx;
-    int alt=0;
-    int [] qt= new int[750];
-        for (qx=0; qx<750; qx=qx+1) {
-            qt[qx] = qx * 4;
-            if (year == qt[qx]) {
-                System.out.println("Високосный");
-alt =1;}
-            }
-if (alt !=1)
-{System.out.println("Не високосный");
-        }
-
-}}
+    }
+System.out.println("Massive max No is "+max);
+    System.out.println("Massive min No is "+min);
+}
+// Задание 6
+public static void Ex6(int [] mass) {
+    int count;
+    int current=0;
+    int current2 = 0;
+    boolean equal = false;
+    for (count = 0; count < mass.length; count = count+1) {
+    current = current+mass[count];
+    }
+    for (count = 0; count < mass.length; count = count+1) {
+        current2 = current2+mass[count];
+        if (current2 == current/2)
+        {equal= true;
+        break;}
+    }
+    System.out.println("Наличие в масиве медианы "+equal);
+}
+}
