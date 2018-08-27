@@ -1,106 +1,38 @@
-package Fine;
+/**
+ *  Geekbrains. Java. Level 1
+ *  Домашнее задание к уроку 5
+ * @ author Golovanov Igor
+ * @ version Aug 26, 2018
+ */
 
-import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
-import java.util.Arrays;
-import java.util.Date;
-
+import java . util . Scanner ;
 public class Main {
-
+    // В классе Mass содержатся метод, позволяющий осуществить ввод данных о сотруднике
+    // и параметризованный конструктор, который получает данные о сотруднике и помещает в базу данных
+    // В классе Base содежится массив, наполняемый данными от экзепляров класса Mass
+    public  static  Scanner  sc  =  new  Scanner ( System . in);
     public static void main(String[] args) {
-
-        // РЅР°Р·РЅР°С‡РµРЅРёРµ РїРµСЂРµРјРµРЅРЅС‹С…
-
-        byte a1 = 1;
-        short a2 = 10000;
-        int a3 = 100000;
-        long a4 = 5L;
-        float a5 = 4.0f;
-        double a6 = 3.14;
-        boolean a7 = true;
-        char a8 = 'd';
-
-    System.out.println(met1(1,2,6,3));
-    System.out.println(met2(13,4));
-    System.out.println(met3(-2));
-    System.out.println(met4(-4));
-    met5("Vasya");
-met6();
-
-
-
-
-
-
-
+        //инициализация переменных в main
+        Base.CreateMass();
+        Mass.Ins ();
+        int m = 0;
+        int n = 0;
+        //добавление сотрудников
+        do{
+        System.out.println("Хотите добавить еще сотрудника? 0-да, 1 - нет");
+        m = Integer.parseInt(sc.next());
+        if (m==0){
+            Mass.Ins ();
+        }}
+        while (m==0);
+        //просмотр массива данных
+        System.out.println("Хотите посмотреть базу? 0-да, 1 - нет");
+        n=Integer.parseInt(sc.next());
+        if (n==0)
+           { Base.ShowArr();}
+        else 
+           {System.exit(0);}
+        }
     }
-       //РјРµС‚РѕРґ 1
 
-      public static int met1(int a,int b,int c,int d)
-        {  int x;
-                x=c/d;
-                x=b+x;
-                x=a*x;
-        return x;}
 
-        //РјРµС‚РѕРґ2
-
-    public static boolean met2(int a,int b)
-    {int x= a+b;
-    boolean z;
-    if (10<=x&20>=x)
-    {z=true;}
-    else
-    {z=false;}
-        return z; }
-
-        //РјРµС‚РѕРґ 3
-
-    public static char met3(int a)
-    {  char x;
-        if (a>0)
-        {x='+';}
-        else
-        {x='-';}
-        return x;}
-
-    //РјРµС‚РѕРґ 4
-
-    public static boolean met4(int a)
-    {  boolean x;
-        if (a>0)
-        {x=false;}
-        else
-        {x=true;}
-        return x;}
-
-    //РјРµС‚РѕРґ 5
-
-    public static String met5(String a)
-    { String x = a;
-        System.out.println("РџСЂРёРІРµС‚,"+x);
-        return x;
-        }
-
-        //РјРµС‚РѕРґ 6
-//РЅРµРјРЅРѕРіРѕ РЅРµ СѓСЃРїРµР» РґРѕРїРёСЃР°С‚СЊ РїСЂРѕ 100 Рё 400 Р»РµС‚, РЅРѕ Р»РѕРіРёРєР° СЃРѕС…СЂР°РЅСЏРµС‚СЃСЏ:
-// С„РѕСЂРјРёСЂСѓРµС‚СЃСЏ РјР°СЃСЃРёРІ РёСЃРєР»СЋС‡РµРЅРёР№ Рё РґРІР° РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹С… Р»РѕРіРёС‡РµСЃРєРёС… РѕРїРµСЂР°С‚РѕСЂР°
-    public static void met6(){
-    Date d = new Date();
-    SimpleDateFormat format1 = new SimpleDateFormat("yyyy");
-    int year = Integer.parseInt(format1.format(d));
-    System.out.println(year);
-    int qx;
-    int alt=0;
-    int [] qt= new int[750];
-        for (qx=0; qx<750; qx=qx+1) {
-            qt[qx] = qx * 4;
-            if (year == qt[qx]) {
-                System.out.println("Р’РёСЃРѕРєРѕСЃРЅС‹Р№");
-alt =1;}
-            }
-if (alt !=1)
-{System.out.println("РќРµ РІРёСЃРѕРєРѕСЃРЅС‹Р№");
-        }
-
-}}
