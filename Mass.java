@@ -10,7 +10,7 @@ public class Mass {
     public  static  Scanner  sc  =  new  Scanner ( System . in);
     static int s=0;
 
-    //формирование шаблона экземпляров
+    //С„РѕСЂРјРёСЂРѕРІР°РЅРёРµ С€Р°Р±Р»РѕРЅР° СЌРєР·РµРјРїР»СЏСЂРѕРІ
     public Mass(String psName, String psPos, String psMail, String psPhone, String psSalary, String psAge) {
         this.psName = psName;
         this.psPos = psPos;
@@ -18,14 +18,14 @@ public class Mass {
         this.psPhone = psPhone;
         this.psSalary = psSalary;
         this.psAge = psAge;
-        System.out.println("Вы ввели следующие данные:" + "\n" +
-                        "Имя  - " + psName + "\n" +
-                        "Должность - " + psPos + "\n" +
-                        "Емейл - " + psMail + "\n" +
-                        "Номер тел - " + psPhone + "\n" +
-                        "Размер з/п - " + psSalary + "\n" +
-                        "Возраст - " + psAge);
-        //передача данных экземпляра в массив данных
+        System.out.println("Р’С‹ РІРІРµР»Рё СЃР»РµРґСѓСЋС‰РёРµ РґР°РЅРЅС‹Рµ:" + "\n" +
+                        "РРјСЏ  - " + psName + "\n" +
+                        "Р”РѕР»Р¶РЅРѕСЃС‚СЊ - " + psPos + "\n" +
+                        "Р•РјРµР№Р» - " + psMail + "\n" +
+                        "РќРѕРјРµСЂ С‚РµР» - " + psPhone + "\n" +
+                        "Р Р°Р·РјРµСЂ Р·/Рї - " + psSalary + "\n" +
+                        "Р’РѕР·СЂР°СЃС‚ - " + psAge);
+        //РїРµСЂРµРґР°С‡Р° РґР°РЅРЅС‹С… СЌРєР·РµРјРїР»СЏСЂР° РІ РјР°СЃСЃРёРІ РґР°РЅРЅС‹С…
         Base.arr[s][0] = psName;
         Base.arr[s][1] = psPos;
         Base.arr[s][2] = psMail;
@@ -35,7 +35,7 @@ public class Mass {
         s=s+1;
     }
 
-    //Метод ввода данных
+    //РјРµС‚РѕРґ РІРІРѕРґР° РґР°РЅРЅС‹С…
     public static void Ins() {
         String psName;
         String psPos;
@@ -43,20 +43,20 @@ public class Mass {
         String psPhone;
         String psSalary;
         String psAge;
-        System.out.println("Введите данные о сотруднике");
-        System.out.println("Введите имя");
+        System.out.println("Р’РІРµРґРёС‚Рµ РґР°РЅРЅС‹Рµ Рѕ СЃРѕС‚СЂСѓРґРЅРёРєРµ");
+        System.out.println("РРјСЏ");
         psName = sc.next();
-        System.out.println("Введите должность");
+        System.out.println("Р”РѕР»Р¶РЅРѕСЃС‚СЊ");
         psPos = sc.next();
-        System.out.println("Введите емейл");
+        System.out.println("Р•РјРµР№Р»");
         psMail = sc.next();
-        System.out.println("Введите номер тел");
+        System.out.println("РќРѕРјРµСЂ С‚РµР»");
         psPhone = sc.next();
-        System.out.println("Введите размер з/п");
+        System.out.println("Р Р°Р·РјРµСЂ Р·/Рї");
         psSalary = sc.next();
-        System.out.println("Введите возраст");
+        System.out.println("Р’РѕР·СЂР°СЃС‚");
         psAge = sc.next();
-        //создание экземпляра
+        //СЃРѕР·РґР°РЅРёРµ СЌРєР·РµРјРїР»СЏСЂР°
         Mass Mass1 = new Mass(psName, psPos, psMail, psPhone, psSalary, psAge);
     }
 }
