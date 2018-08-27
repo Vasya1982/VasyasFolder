@@ -1,20 +1,20 @@
 public class Base {
-    //инициализация массива
+    //РёРЅРёС†РёР°Р»РёР·Р°С†РёСЏ РјР°СЃСЃРёРІР°
     static String arr[][];
     public static void CreateMass (){
     arr = new String [100][6];}
-    //печать массива
+    //РїРµС‡Р°С‚СЊ РјР°СЃСЃРёРІР°
     public static void ShowArr() {
-        System.out.println("База сотрудников:");
-        System.out.println("Имя / Должность / Емейл / Номер тел / Размер зп / Возраст");
+        System.out.println("Р‘Р°Р·Р° СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ:");
+        System.out.println("РРјСЏ / Р”РѕР»Р¶РЅРѕСЃС‚СЊ / Р•РјРµР№Р» / РќРѕРјРµСЂ С‚РµР» / Р Р°Р·РјРµСЂ Р·Рї / Р’РѕР·СЂР°СЃС‚");
    for (int i = 0; i < Mass.s; ++i) {
       for (int j = 0; j < 6; ++j) {
         System.out.print(arr[i][j]+"   ");
       }
       System.out.println();
    }
-   //Выборка сотрудников старше 40 лет
-        System.out.println("Сотрудники старше 40 лет:");
+   //РџРµСЂРїРµС‡РµРЅСЊ СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ СЃС‚Р°СЂС€Рµ СЃРѕСЂРѕРєР° Р»РµС‚
+        System.out.println("РЎРѕС‚СЂСѓРґРЅРёРєРё СЃС‚СЂР°С€Рµ 40 Р»РµС‚:");
         for (int i = 0; i < Mass.s; ++i) {
             if (Integer.parseInt(arr[i][5])>40) {
                 for (int j = 0; j < 6; ++j) {
