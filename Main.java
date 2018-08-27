@@ -1,53 +1,38 @@
 /**
-*Р”РѕРјР°С€РЅРµРµ Р·Р°РґР°РЅРёРµ Рє СѓСЂРѕРєСѓ 2
-* @Golovanov Igor
-*/
-package Fine;
+ *  Geekbrains. Java. Level 1
+ *  Домашнее задание к уроку 5
+ * @ author Golovanov Igor
+ * @ version Aug 26, 2018
+ */
+
+import java . util . Scanner ;
 public class Main {
+    // В классе Mass содержатся метод, позволяющий осуществить ввод данных о сотруднике
+    // и параметризованный конструктор, который получает данные о сотруднике и помещает в базу данных
+    // В классе Base содежится массив, наполняемый данными от экзепляров класса Mass
+    public  static  Scanner  sc  =  new  Scanner ( System . in);
     public static void main(String[] args) {
-        int [] mass = {2,1, 9, 7, 0, -4,6, 3};
-Ex5(mass);
-Ex6(mass);
-    }
-    // Р—Р°РґР°РЅРёРµ 5
-public static void Ex5(int [] mass)
-{
-    int count;
-    int current;
-    int max = 0;
-    int min = 0;
-for (count = 0; count < mass.length; count = count+1)
-{
-current = mass[count];
-    if (current > max) {
-        max = current;
-    }
-}
-    for (count = 0; count < mass.length; count = count+1)
-    {
-        current = mass[count];
-        if (current < min) {
-            min = current;
+        //инициализация переменных в main
+        Base.CreateMass();
+        Mass.Ins ();
+        int m = 0;
+        int n = 0;
+        //добавление сотрудников
+        do{
+        System.out.println("Хотите добавить еще сотрудника? 0-да, 1 - нет");
+        m = Integer.parseInt(sc.next());
+        if (m==0){
+            Mass.Ins ();
+        }}
+        while (m==0);
+        //просмотр массива данных
+        System.out.println("Хотите посмотреть базу? 0-да, 1 - нет");
+        n=Integer.parseInt(sc.next());
+        if (n==0)
+           { Base.ShowArr();}
+        else 
+           {System.exit(0);}
         }
     }
-System.out.println("Massive max No is "+max);
-    System.out.println("Massive min No is "+min);
-}
-// Р—Р°РґР°РЅРёРµ 6
-public static void Ex6(int [] mass) {
-    int count;
-    int current=0;
-    int current2 = 0;
-    boolean equal = false;
-    for (count = 0; count < mass.length; count = count+1) {
-    current = current+mass[count];
-    }
-    for (count = 0; count < mass.length; count = count+1) {
-        current2 = current2+mass[count];
-        if (current2 == current/2)
-        {equal= true;
-        break;}
-    }
-    System.out.println("РќР°Р»РёС‡РёРµ РІ РјР°СЃРёРІРµ РјРµРґРёР°РЅС‹ "+equal);
-}
-}
+
+
