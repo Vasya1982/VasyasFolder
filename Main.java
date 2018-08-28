@@ -1,38 +1,34 @@
 /**
- *  Geekbrains. Java. Level 1
- *  Домашнее задание к уроку 5
- * @ author Golovanov Igor
- * @ version Aug 26, 2018
+ * Geekbrains. Java Level 1
+ *
+ * @ Р”РѕРјР°С€РЅРµРµ Р·Р°РґР°РЅРёРµ Рє СѓСЂРѕРєСѓ 6
+ * @ Golovanov Igor
  */
-
-import java . util . Scanner ;
+package Fine;
+import java.util.Scanner;
 public class Main {
-    // В классе Mass содержатся метод, позволяющий осуществить ввод данных о сотруднике
-    // и параметризованный конструктор, который получает данные о сотруднике и помещает в базу данных
-    // В классе Base содежится массив, наполняемый данными от экзепляров класса Mass
-    public  static  Scanner  sc  =  new  Scanner ( System . in);
+    public static int x;
+    public static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
-        //инициализация переменных в main
-        Base.CreateMass();
-        Mass.Ins ();
-        int m = 0;
-        int n = 0;
-        //добавление сотрудников
-        do{
-        System.out.println("Хотите добавить еще сотрудника? 0-да, 1 - нет");
-        m = Integer.parseInt(sc.next());
-        if (m==0){
-            Mass.Ins ();
-        }}
-        while (m==0);
-        //просмотр массива данных
-        System.out.println("Хотите посмотреть базу? 0-да, 1 - нет");
-        n=Integer.parseInt(sc.next());
-        if (n==0)
-           { Base.ShowArr();}
-        else 
-           {System.exit(0);}
-        }
+        int a;
+        double b;
+        //С‚РµСЃС‚ РєРѕС€РєРё
+        AnimalParent c = new Cat();
+        System.out.println("Input Cat Run dist (int)");
+        c.Run(a = Integer.parseInt(sc.next()));
+        System.out.println("Input Cat Swim dist (int)");
+        c.Swim(a = Integer.parseInt(sc.next()));
+        System.out.println("Input Cat Jump dist (double)");
+        c.Jump(b = Double.parseDouble(sc.next()));
+        //С‚РµСЃС‚ СЃРѕР±Р°РєРё
+        System.out.println("Please, choose Dog: 0 - hound, 1 - other breed");
+        x = Integer.parseInt(sc.next());
+        AnimalParent d = new Dog();
+        System.out.println("Input Dog Run dist (int)");
+        d.Run(a = Integer.parseInt(sc.next()));
+        System.out.println("Input Dog Swim dist (int)");
+        d.Swim(a = Integer.parseInt(sc.next()));
+        System.out.println("Input Dog Jump dist (double)");
+        d.Jump(b = Double.parseDouble(sc.next()));
     }
-
-
+}
